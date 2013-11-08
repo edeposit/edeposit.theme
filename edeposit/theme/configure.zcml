@@ -1,0 +1,27 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="edeposit.theme">
+
+  <five:registerPackage package="." initialize=".initialize" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="edeposit.theme"
+      directory="profiles/default"
+      description="Installs the edeposit.theme package"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <!-- Register the /++theme++edeposit.theme/ static resource directory -->
+  <plone:static
+      directory="resources"
+      type="theme"
+      />
+
+
+  <!-- -*- extra stuff goes here -*- -->
+  
+</configure>

@@ -1,0 +1,10 @@
+<layers>
+    
+    <!-- Enable the E-Deposit Theme layer when installed -->
+    
+    <layer
+        name="edeposit.theme"
+        interface="edeposit.theme.interfaces.IeDepositTheme"
+        />
+
+</layers>
