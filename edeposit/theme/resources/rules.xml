@@ -4,5 +4,301 @@
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
+    <!-- Rules applying to standard Plone pages -->
+    <rules if-path="++add++edeposit.content.epublication">
+      <theme href="ohlaseni.html"/>
+        
+      <!-- Copy standard header tags, including base (very important for
+           Plone default pages to work correctly), meta, title and
+           style sheets/scripts, in the order they appear in the content.
+      -->
+      <drop theme="/html/head/meta" />
+      <drop theme="/html/head/title" />
+      <drop theme="/html/head/base" />
+      <drop theme="/html/head/style" />
+      <drop theme="/html/head/script" />
+      <drop theme="/html/head/comment()" />
+      
+      <after content="/html/head/meta" theme-children="/html/head" />
+      <after content="/html/head/title" theme-children="/html/head" />
+      
+      <after
+          content="/html/head/base | /html/head/comment()"
+          theme-children="/html/head"
+          />
 
+      <!-- Copy over the id/class attributes on the body tag. This is important
+           for per-section styling -->
+      <copy attributes="class id dir" content="/html/body" theme="/html/body" />
+      
+      <!-- Logo (link target) -->
+      <copy attributes="href title" css:content="#portal-logo" css:theme="#portal-logo" />
+      <copy attributes="src width height" css:theme="#portal-logo img" css:content="#portal-logo img"/>
+
+      <!-- form -->
+      <drop css:theme="input[type='hidden']"/>
+      <drop css:theme="form" attributes="*"/>
+      <copy css:content="form" attributes="*" css:theme="form"/>
+      <drop css:theme="td.submit-buttons a"/>
+      <after css:content="input[name='form.buttons.save']" css:theme-children="td.submit-buttons"/>
+      <after css:content="input[name='form.buttons.cancel']" css:theme-children="td.submit-buttons"/>
+               
+      <!-- form / file / isbn -->
+      <after css:content="#formfield-form-widgets-IOriginalFile-isbn div.fieldErrorBox"
+             css:theme-children=".original-file > td:nth-child(1)"/>
+      <copy css:content="#form-widgets-IOriginalFile-isbn"
+            css:theme=".original-file > td:nth-child(2)"/>
+      
+      <!-- form / file / url -->
+      <copy css:content="#formfield-form-widgets-IOriginalFile-url > label:nth-child(1)"
+            css:theme=".upload-label"/>
+      <after css:content="#formfield-form-widgets-IOriginalFile-url div.fieldErrorBox"
+             css:theme-children=".upload-label"/>
+      <copy css:content="#form-widgets-IOriginalFile-url"
+            css:theme=".upload"/>
+      
+      <!-- form / file / upload -->
+      <copy css:content="#formfield-form-widgets-IOriginalFile-file > label:nth-child(1)"
+            css:theme="td.td1:nth-child(5)"></copy>
+      <after css:theme-children="td.td1:nth-child(5)">*</after>
+      <after css:content="#formfield-form-widgets-IOriginalFile-file div.fieldErrorBox"
+             css:theme-children="td.td1:nth-child(5)"/>
+      <copy css:content="#form-widgets-IOriginalFile-file-input" 
+            css:theme="td.td1:nth-child(6)"/>
+      
+      <!-- format -->
+      <after  css:theme-children=".isbn-souboru td:nth-child(3)"
+              css:content="#formfield-form-widgets-IOriginalFile-format  div.fieldErrorBox"
+            />
+      
+      <copy css:theme=".isbn-souboru td:nth-child(4)"
+            css:content="#form-widgets-IOriginalFile-format"
+            />
+
+      <!-- nazev -->
+      <after  css:theme-children=".nazev td:nth-child(1)"
+              css:content="#formfield-form-widgets-IBasic-title  div.fieldErrorBox"
+            />
+      
+      <copy css:theme=".nazev > td:nth-child(2)" 
+            css:content="#form-widgets-IBasic-title"
+            />
+      
+      <!-- cena -->
+      <after  css:theme-children=".nazev td:nth-child(3)"
+              css:content="#formfield-form-widgets-cena  div.fieldErrorBox"
+            />
+
+      <copy css:theme=".nazev > td:nth-child(4)" 
+            css:content="#form-widgets-cena"
+            />
+      
+      <!-- podnazev -->
+      <after  css:theme-children=".podnazev td:nth-child(1)"
+              css:content="#formfield-form-widgets-podnazev  div.fieldErrorBox"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".podnazev > td:nth-child(2) > input" 
+             css:content="#form-widgets-podnazev"
+            />
+      
+      <!-- cast dil -->
+      <after  css:theme-children=".cast_dil td:nth-child(1)"
+              css:content="#formfield-form-widgets-cast  div.fieldErrorBox"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".cast_dil > td:nth-child(2) > input" 
+             css:content="#form-widgets-cast"
+            />
+      
+      <!-- nazev casti -->
+      <after  css:theme-children=".cast_dil td:nth-child(3)"
+              css:content="#formfield-form-widgets-nazev_casti  div.fieldErrorBox"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".cast_dil > td:nth-child(4) > input" 
+             css:content="#form-widgets-nazev_casti"
+            />
+
+      <!-- author 01 -->
+      <!-- <after  css:theme-children=".author01 td:nth-child(1)" -->
+      <!--         css:content="#formfield-form-widgets-IAuthors-authors-0  div.fieldErrorBox" -->
+      <!--       /> -->
+
+      <copy attributes="name value type id"
+             css:theme=".author01 td:nth-child(2) input" 
+             css:content="#form-widgets-IAuthors-authors-0-widgets-fullname"
+            />
+
+      <!-- author 02, author 03 -->
+      <!-- <after  css:theme-children=".author02 td:nth-child(1)" -->
+      <!--         css:content="#formfield-form-widgets-IAuthors-authors-1  div.fieldErrorBox" -->
+      <!--       /> -->
+
+      <!-- <after  css:theme-children=".author02 td:nth-child(1)" -->
+      <!--         css:content="#formfield-form-widgets-IAuthors-authors-2  div.fieldErrorBox" -->
+      <!--       /> -->
+
+      <copy attributes="name value type id"
+             css:theme=".author02 td:nth-child(2) input:nth-child(1)" 
+             css:content="#form-widgets-IAuthors-authors-1-widgets-fullname"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".author02 td:nth-child(2) input:nth-child(2)" 
+             css:content="#form-widgets-IAuthors-authors-2-widgets-fullname"
+            />
+
+      <!-- misto vydani -->
+      <after  css:theme-children=".misto-vydani td:nth-child(1)"
+              css:content="#formfield-form-widgets-misto_vydani  div.fieldErrorBox"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".misto-vydani td:nth-child(2) input"
+             css:content="#form-widgets-misto_vydani"
+            />
+
+      <!-- nakladatel -->
+      <after  css:theme-children=".misto-vydani td:nth-child(3)"
+              css:content="#formfield-form-widgets-nakladatel_vydavatel  div.fieldErrorBox"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".misto-vydani td:nth-child(4) input"
+             css:content="#form-widgets-nakladatel_vydavatel"
+            />
+      
+      <!-- datum vydani -->
+      <after  css:theme-children=".datum-vydani td:nth-child(1)"
+              css:content="#formfield-form-widgets-datum_vydani  div.fieldErrorBox"
+            />
+
+      <copy  css:theme=".datum-vydani td:nth-child(2)"
+             css:content="#form-widgets-datum_vydani-day"
+            />
+
+      <after  css:theme-children=".datum-vydani td:nth-child(2)"
+              css:content="#form-widgets-datum_vydani-month"
+            />
+
+      <after  css:theme-children=".datum-vydani td:nth-child(2)"
+              css:content="#form-widgets-datum_vydani-year"
+            />
+
+      <!-- vydano v koedici s -->
+      <after  css:theme-children=".datum-vydani td:nth-child(3)"
+              css:content="#formfield-form-widgets-vydano_v_koedici_s  div.fieldErrorBox"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".datum-vydani td:nth-child(4) input"
+             css:content="#form-widgets-vydano_v_koedici_s"
+            />
+
+      <!-- poradi vydani -->
+      <after  css:theme-children=".poradi-vydani td:nth-child(1)"
+              css:content="#formfield-form-widgets-poradi_vydani  div.fieldErrorBox"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".poradi-vydani td:nth-child(2) input"
+             css:content="#form-widgets-poradi_vydani"
+            />
+
+      <!-- zpracovatel -->
+      <after  css:theme-children=".zpracovatel td:nth-child(1)"
+              css:content="#formfield-form-widgets-zpracovatel_zaznamu  div.fieldErrorBox"
+            />
+
+      <copy attributes="name value type id"
+             css:theme=".zpracovatel td:nth-child(2) input"
+             css:content="#form-widgets-zpracovatel_zaznamu"
+            />
+
+      <!-- RIV -->
+      <after  css:theme-children=".riv td:nth-child(1)"
+              css:content="#formfield-form-widgets-offer_to_riv  div.fieldErrorBox"
+            />
+
+      <copy  css:theme=".riv td:nth-child(2)"
+             css:content="#form-widgets-offer_to_riv-0"
+            />
+
+      <after  css:theme-children=".riv td:nth-child(3)"
+              css:content="#formfield-form-widgets-category_for_riv  div.fieldErrorBox"
+            />
+
+      <copy  css:theme=".riv td:nth-child(4)"
+             css:content="#form-widgets-category_for_riv"
+            />
+      
+      <!-- zpristupneni -->
+      <!-- <after  css:theme-children="form" -->
+      <!--         css:content="#form > input[hidden]" -->
+      <!--       /> -->
+
+      <!-- <copy attributes="name value type id" -->
+      <!--        css:theme=".poradi-vydani td:nth-child(2) input" -->
+      <!--        css:content="#form-widgets-poradi_vydani" -->
+      <!--       /> -->
+
+      <!-- all hidden inputs from content -->
+      <after css:theme-children="form"
+             content="//form[@id='form']//input[@type='hidden']"
+             />
+
+      <!-- Site actions -->
+      <replace css:content="#portal-siteactions li" css:theme-children="#actions" />
+      
+      <!-- User actions -->
+      
+      <!-- The logged-in actions are a list... -->
+      <after css:content="#portal-personaltools li" css:theme-children="#actions" />
+      
+      <!-- ... but for anonymous users, it's a dl, so we build list elements
+           using XSL directives
+      -->
+      <after css:theme-children="#actions">
+        <xsl:for-each css:select="#anon-personalbar > a">
+          <li><xsl:copy-of css:select="a"/></li>
+        </xsl:for-each>
+      </after>
+      
+      <!-- Global navigation -->
+      <replace css:content='#portal-globalnav li' css:theme-children='#global-navigation' />
+      
+      <!-- Breadcrumbs -->
+      <replace css:content-children='#portal-breadcrumbs' css:theme-children='#breadcrumbs' />
+      
+      <!-- Document Content -->
+      <replace css:content="#content" css:theme="#document-content" />
+      
+      <!-- Edit bar -->
+      <before css:content="#edit-bar" css:theme="#document-content" />
+      
+      <!-- Status messages not inside #content -->
+      <drop css:content="#content .portalMessage"/>
+      <before css:content=".portalMessage" method="raw" css:theme="#document-content" />
+      
+      <!-- Drop navtree images -->
+      <drop css:content="dl#portletNavigationTree img" />
+      
+      <!-- Columns -->
+      <replace css:content-children="#portal-column-one" css:theme-children="#column-one" />
+      <replace css:content-children="#portal-column-two" css:theme-children="#column-two" />
+      
+      <!-- Footer -->
+      <after css:content="#kss-spinner" theme-children="/html/body" />
+
+      <after css:theme="p.info"
+              css:content="dl.portalMessage"/>
+
+      <!-- <after css:content="#portal-column-content" -->
+      <!--        css:theme-children="body"/> -->
+
+    </rules>
 </rules>

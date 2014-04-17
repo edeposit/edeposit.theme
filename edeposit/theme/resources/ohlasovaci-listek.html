@@ -1,0 +1,255 @@
+<!-- filename: service-isbn --> 
+<html> 
+<head> 
+<title>Ohlašovací lístek ISBN - knihy</title> 
+<!-- filename: meta-tags --> 
+ 
+<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache"> 
+<META HTTP-EQUIV="Expires" CONTENT="Sun, 06 Nov 1994 08:49:37 GMT"> 
+<META HTTP-EQUIV="Refresh" CONTENT="1200; URL=javascript:window.close()"> 
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"> 
+<META HTTP-EQUIV="Content-Script-Type" CONTENT="text/javascript"> 
+ 
+<link rel="stylesheet" href="http://aleph.nkp.cz/aleph.css" TYPE="text/css"> 
+<script src="http://aleph.nkp.cz/service-isbn.js" type="text/javascript"></script> 
+<script type="text/javascript"> 
+<!-- 
+function open_vzor() { 
+  window.open("http://aleph.nkp.cz/F/JJPIV6IFNTSS9D5B73Y2QQYPVEVL3NTU6J1SYVQYBEDR9BTA77-49353?func=file&file_name=service-isbn-0","isxn_vzor","width=760,height=520,scrollbars,resizable"); 
+} 
+// --> 
+</script> 
+</head> 
+ 
+<body style="margin-top:0px" 
+      onload="document.f.P0501010__a.focus()"> 
+<table width=100% cellspacing=0 cellpadding=0> 
+ <tr> 
+  <td valign="middle" height="20" background="http://aleph.nkp.cz/exlibris/aleph/u20_1/alephe/www_f_cze/icon/f-spacer.jpg"> </td> 
+ </tr> 
+</table> 
+<table style="margin-top:20px" width=100% border=0> 
+ <tr> 
+  <td width="5%" nowrap> 
+    <img src="http://aleph.nkp.cz/exlibris/aleph/u20_1/alephe/www_f_cze/icon/nk-logo-b.gif" width="60" border="0" align="absmiddle"> &nbsp; 
+  </td> 
+  <td class=title align=left> 
+      Ohlašovací lístek ISBN - knihy 
+  </td> 
+  <td align=right> 
+      <a href="javascript:window.close();"> 
+      <img src="http://aleph.nkp.cz/exlibris/aleph/u20_1/alephe/www_f_cze/icon/f-close.gif" border=0></a> 
+  </td> 
+ </tr> 
+</table> 
+ 
+<p class=text1> 
+Vyplňte pečlivě podle <a href="javascript:open_vzor()"><b>vzoru</b></a>. Údaje označené <b>*</b> jsou <b>povinné</b>. 
+</p> 
+ 
+<form method=post 
+      name="f" action="http://aleph.nkp.cz/aleph-cgi/isxn" 
+      onsubmit="return submit_conf();"> 
+<input type="hidden" name="sid" value="JJPIV6IFNTSS9D5B73Y2QQYPVEVL3NTU6J1SYVQYBEDR9BTA77"> 
+ 
+<table width=100% border=0 cellpadding=3 cellspacing=2> 
+ <input type="hidden" name="P0100LDR__" value="-----nam-a22------a-4500"> 
+ <input type="hidden" name="P0200FMT__" value="BK"> 
+ <input type="hidden" name="P0300BAS__a" value="30"> 
+ <tr> 
+  <td class=td1 width=15% nowrap> 
+      ISBN: <b>*</b>&nbsp; 
+  </td> 
+  <td class=td1 width=25%> 
+      <input type="text" size="20" maxlength="20" name="P0501010__a" value="" 
+             onchange="this.value=this.value.replace('x','X')"> 
+  </td> 
+  <td class=td1 width=15% nowrap> 
+      Vazba/forma: <b>*</b>&nbsp; 
+  </td> 
+  <td class=td1 width="15%"> 
+      <select name="P0502010__b" onchange="if ( this.value != 'online' ) { document.f.P110185640u.value = ''; document.f.P0503010__x.value = ''; document.f.P110185640u.disabled = true; document.f.P0503010__x.disabled = true } else { document.f.P110185640u.disabled = false; document.f.P0503010__x.disabled = false }" > 
+        <option value=""> </option> 
+        <option value="brož.">brož.      </option> 
+        <option value="váz.">váz.      </option> 
+        <option value="mapa">mapa      </option> 
+        <option value="CD-ROM">CD-ROM      </option> 
+        <option value="DVD">DVD      </option> 
+        <option value="online">online      </option> 
+      </select> 
+      <!--input type="text" size="10" name="P0502010__b" value=""--> 
+  </td> 
+  <td class=td1 width=15% nowrap> 
+      Cena: &nbsp; 
+  </td> 
+  <td class=td1 width="15%"> 
+      <input type="text" size="10" maxlength="15" name="P0504010__d" value=""> 
+  </td> 
+ </tr> 
+ <!--tr> 
+  <td class=td1 nowrap> 
+      EAN: &nbsp; 
+  </td> 
+  <td class=td1 colspan=5> 
+      <input type="text" size="20" maxlength="20" name="P1201901__b" value=""> 
+  </td> 
+ </tr--> 
+ <tr> 
+  <td class=td1 width=15% nowrap> 
+      ISBN souboru: &nbsp; 
+  </td> 
+  <td class=td1 colspan=5> 
+      <input type="text" size="20" maxlength="20" name="P0601010__a" value="" 
+             onchange="this.value=this.value.replace('x','X')"> 
+      &nbsp; (pouze pro vícesvazkové dokumenty) 
+      <input type="hidden" name="P0602010__b" value=""> 
+  </td> 
+ </tr> 
+ <tr height=15> <td></td> </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Název: <b>*</b>&nbsp; 
+  </td> 
+  <td class=td1 colspan=5> 
+      <input type="text" size="65" maxlength="250" name="P07012001_a" value=""> 
+      <input type="hidden" name="P07022001_b" value=""> 
+  </td> 
+ </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Podnázev: &nbsp; 
+  </td> 
+  <td class=td1 colspan=5> 
+      <input type="text" size="65" maxlength="250" name="P07032001_e" value=""> 
+  </td> 
+ </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Část (svazek, díl): &nbsp; 
+  </td> 
+  <td class=td1> 
+      <input type="text" size="15" maxlength="25" name="P07042001_h" value=""> 
+  </td> 
+  <td class=td1 nowrap> 
+      Název části: &nbsp; 
+  </td> 
+  <td class=td1 colspan=3> 
+      <input type="text" size="50" maxlength="150" name="P07052001_i" value=""> 
+  </td> 
+ </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Autor: &nbsp; 
+  </td> 
+  <td class=td1 colspan=5> 
+      <input type="text" size="30" maxlength="50" name="P1301ZAK__b" value=""> 
+
+      &nbsp; (příjmení, křestní jm.) 
+  </td> 
+ </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Další autoři: &nbsp; 
+  </td> 
+  <td class=td1 colspan=5 nowrap> 
+      <input type="text" size="30" maxlength="50" name="P1302ZAK__c" value=""> &nbsp; 
+      <input type="text" size="30" maxlength="50" name="P1303ZAK__c" value=""> 
+      &nbsp; (příjmení, křestní jm.) 
+  </td> 
+ </tr> 
+ <!--tr> 
+  <td class=td1 nowrap> 
+      Edice: &nbsp; 
+  </td> 
+  <td class=td1 colspan="3"> 
+      <input type="text" size="65" maxlength="250" name="P10012252_a" value=""> 
+  </td> 
+  <td class=td1 nowrap> 
+      Číslo svazku: &nbsp; 
+  </td> 
+  <td class=td1> 
+      <input type="text" size="10" maxlength="25" name="P10022252_v" value=""> 
+  </td> 
+ </tr--> 
+ <tr> 
+  <td class=td1 nowrap> 
+      URL <b>*</b><br>(pouze online publikace): &nbsp; 
+  </td> 
+  <td class=td1 colspan="3"> 
+      <input type="text" size="65" maxlength="250" name="P110185640u" value="" disabled> 
+  </td> 
+  <td class=td1 nowrap> 
+      Formát <b>*</b><br>(pouze online publikace): &nbsp; 
+  </td> 
+  <td class=td1> 
+      <input type="text" size="10" maxlength="25" name="P0503010__x" value="" disabled> 
+  </td> 
+ </tr> 
+ <tr height=15> <td></td> </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Místo vydání: <b>*</b>&nbsp; 
+  </td> 
+  <td class=td1> 
+      <input type="text" size="20" maxlength="50" name="P0901210__a" value=""> 
+  </td> 
+  <td class=td1 nowrap> 
+      Nakladatel: <b>*</b>&nbsp; 
+  </td> 
+  <td class=td1 colspan=3> 
+      <input type="text" size="45" maxlength="150" name="P0902210__c" value=""> 
+  </td> 
+ </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Měsíc a rok <br> vydání: <b>*</b>&nbsp; 
+  </td> 
+  <td class=td1> 
+      <input type="text" size="20" maxlength="25" name="P0903210__d" value=""> 
+  </td> 
+  <td class=td1 nowrap> 
+      Vydáno <br> v koedici s: &nbsp; 
+  </td> 
+  <td class=td1 colspan=3> 
+      <input type="text" size="45" maxlength="150" name="P1401PJM__a" value=""> 
+  </td> 
+ </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Pořadí vydání: <b>*</b>&nbsp; 
+  </td> 
+  <td class=td1 colspan=5> 
+      <input type="text" size="20" maxlength="50" name="P0801205__a" value=""> 
+  </td> 
+ </tr> 
+ <tr> 
+  <td class=td1 nowrap> 
+      Zpracovatel <br> záznamu: <b>*</b>&nbsp; 
+  </td> 
+  <td class=td1 colspan=5> 
+      <input type="hidden" name="P1501IST1_a" value="ow"> 
+      <input type="text" size="30" maxlength="50" name="P1502IST1_b" value=""> 
+      <input type="hidden" name="P1601ISB__a" value=""> 
+  </td> 
+ </tr> 
+ <tr> 
+  <td class=td1 colspan=5 align="right"> 
+      <input type="checkbox" name="REPEAT" value="Y"> 
+      Ohlásit stejný titul ještě jednou s jiným ISBN (jiná vazba, formát online publikace apod.) &nbsp;&nbsp;&nbsp; 
+  </td> 
+  <td class=td1 align="right"> 
+      <a href="#"> 
+       <img src="http://aleph.nkp.cz/exlibris/aleph/u20_1/alephe/www_f_cze/icon/f-go.gif" border=0 alt="Odeslat" onclick="submit_form()"></a> 
+      <a href="#"> 
+       <img src="http://aleph.nkp.cz/exlibris/aleph/u20_1/alephe/www_f_cze/icon/f-cancel.gif" border=0 alt="Vyčistit formulář" onclick="reset_form()"></a> 
+  </td> 
+ </tr> 
+</table> 
+</form> 
+ 
+<br> 
+<div class="copyright"> &copy; 2005 Ex Libris, NK ČR</div> 
+ 
+</body> 
+</html> 

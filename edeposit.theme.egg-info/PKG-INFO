@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: edeposit.theme
+Version: 0.9
+Summary: E-Deposit: Theme for a site
+Home-page: http://github.com/jstavel/edeposit.theme
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: GPL
+Description: Introduction
+        ============
+        
+        
+        
+        This product may contain traces of nuts.
+        
+        Changelog
+        =========
+        
+        0.9dev (unreleased)
+        -------------------
+        
+        - Initial release
+        
+Platform: UNKNOWN
+Classifier: Framework :: Plone
+Classifier: Programming Language :: Python
