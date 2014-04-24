@@ -26,9 +26,11 @@ setup(name='edeposit.theme',
       install_requires=[
           'setuptools',
           'plone.app.theming',
-          'plone.app.themingplugins',
           # -*- Extra requirements: -*-
       ],
+      extras_require = {
+          'test': ['plone.app.testing',]
+      },
       entry_points="""
       # -*- Entry points: -*-
 

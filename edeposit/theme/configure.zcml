@@ -10,7 +10,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="edeposit.theme"
+      title="eDeposit Theme"
       directory="profiles/default"
       description="Installs the edeposit.theme package"
       provides="Products.GenericSetup.interfaces.EXTENSION"

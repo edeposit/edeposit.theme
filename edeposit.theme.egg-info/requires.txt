@@ -1,3 +1,5 @@
 setuptools
 plone.app.theming
-plone.app.themingplugins
+
+[test]
+plone.app.testing
