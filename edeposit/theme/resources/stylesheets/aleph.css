@@ -23,6 +23,10 @@ BODY
   color:#212063;
   text-decoration:none;
 }
+input[type='submit'] {
+    font-size:120%;
+}
+
 .fieldErrorBox div.error {
     background-color: #FDC;
     border: 1px solid #F00;

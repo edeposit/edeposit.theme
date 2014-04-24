@@ -72,7 +72,7 @@
               css:content="#formfield-form-widgets-IOriginalFile-format  div.fieldErrorBox"
             />
       
-      <copy css:theme=".isbn-souboru td:nth-child(4)"
+      <copy css:theme="#format-souboru"
             css:content="#form-widgets-IOriginalFile-format"
             />
 
@@ -168,17 +168,17 @@
             />
 
       <copy attributes="name value type id"
-             css:theme=".misto-vydani td:nth-child(2) input"
+             css:theme="#misto-vydani input"
              css:content="#form-widgets-misto_vydani"
             />
 
       <!-- nakladatel -->
-      <after  css:theme-children=".misto-vydani td:nth-child(3)"
+      <after  css:theme-children="#nakladatel-label"
               css:content="#formfield-form-widgets-nakladatel_vydavatel  div.fieldErrorBox"
             />
 
       <copy attributes="name value type id"
-             css:theme=".misto-vydani td:nth-child(4) input"
+             css:theme="#nakladatel input"
              css:content="#form-widgets-nakladatel_vydavatel"
             />
       
@@ -187,15 +187,15 @@
               css:content="#formfield-form-widgets-datum_vydani  div.fieldErrorBox"
             />
 
-      <copy  css:theme=".datum-vydani td:nth-child(2)"
+      <copy  css:theme="#datum-vydani"
              css:content="#form-widgets-datum_vydani-day"
             />
 
-      <after  css:theme-children=".datum-vydani td:nth-child(2)"
+      <after  css:theme-children="#datum-vydani"
               css:content="#form-widgets-datum_vydani-month"
             />
 
-      <after  css:theme-children=".datum-vydani td:nth-child(2)"
+      <after  css:theme-children="#datum-vydani"
               css:content="#form-widgets-datum_vydani-year"
             />
 
@@ -205,7 +205,7 @@
             />
 
       <copy attributes="name value type id"
-             css:theme=".datum-vydani td:nth-child(4) input"
+             css:theme="#vydano-v-koedici-s input"
              css:content="#form-widgets-vydano_v_koedici_s"
             />
 
@@ -215,7 +215,7 @@
             />
 
       <copy attributes="name value type id"
-             css:theme=".poradi-vydani td:nth-child(2) input"
+             css:theme="#poradi-vydani input"
              css:content="#form-widgets-poradi_vydani"
             />
 
@@ -224,8 +224,7 @@
               css:content="#formfield-form-widgets-zpracovatel_zaznamu  div.fieldErrorBox"
             />
 
-      <copy attributes="name value type id"
-             css:theme=".zpracovatel td:nth-child(2) input"
+      <copy  css:theme="#zpracovatel-zaznamu"
              css:content="#form-widgets-zpracovatel_zaznamu"
             />
 
@@ -242,7 +241,7 @@
               css:content="#formfield-form-widgets-category_for_riv  div.fieldErrorBox"
             />
 
-      <copy  css:theme=".riv td:nth-child(4)"
+      <copy  css:theme="#kategorie-pro-riv"
              css:content="#form-widgets-category_for_riv"
             />
       
