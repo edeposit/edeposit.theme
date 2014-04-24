@@ -103,6 +103,15 @@
              css:theme=".podnazev > td:nth-child(2) > input" 
              css:content="#form-widgets-podnazev"
             />
+
+      <!-- isbn souboru -->
+      <after  css:theme-children=".isbn-souboru td:nth-child(1)"
+              css:content="#formfield-form-widgets-isbn_souboru_publikaci  div.fieldErrorBox"
+            />
+      
+      <copy css:theme=".isbn-souboru > td:nth-child(2)" 
+            css:content="#form-widgets-isbn_souboru_publikaci"
+            />
       
       <!-- cast dil -->
       <after  css:theme-children=".cast_dil td:nth-child(1)"
