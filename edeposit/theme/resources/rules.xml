@@ -36,6 +36,7 @@
       <copy attributes="src width height" css:theme="#portal-logo img" css:content="#portal-logo img"/>
 
       <!-- form -->
+      <drop css:theme="td" attributes="width"/>
       <drop css:theme="input[type='hidden']"/>
       <drop css:theme="form" attributes="*"/>
       <copy css:content="form" attributes="*" css:theme="form"/>
