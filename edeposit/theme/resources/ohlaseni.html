@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ohlášovací lístek</title>
-
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
     <link rel="stylesheet" href="stylesheets/aleph.css" type="text/css" media="screen" />
     <!--[if IE]>
       <link rel="stylesheet" media="screen" type="text/css" href="stylesheets/iefixes.css" />
@@ -42,13 +42,15 @@
  <input type="hidden" name="P0100LDR__" value="-----nam-a22------a-4500"> 
  <input type="hidden" name="P0200FMT__" value="BK"> 
  <input type="hidden" name="P0300BAS__a" value="30"> 
- <tr class="original-file"> 
+ <tr class="original-file" > 
   <td class="td1" width="15%" nowrap> 
       ISBN: <b>*</b>&nbsp; 
   </td> 
-  <td class="td1" width="25%"> 
+  <td width="25%" 
+      data-fieldname="form.widgets.IOriginalFile.isbn" 
+      class="td1 field z3cformInlineValidation kssattr-fieldname-form.widgets.IOriginalFile.isbn empty" id="formfield-form-widgets-IOriginalFile-isbn"> 
       <input type="text" size="20" maxlength="20" name="P0501010__a" value="" 
-             onchange="this.value=this.value.replace('x','X')"> 
+             onchange="this.value=this.value.replace('x','X')"/> 
   </td>
   <td class="td1 upload-label" width="15%" nowrap> Vazba/forma: <b>*</b></td> 
   <td class="td1 upload" width="15%">
@@ -77,7 +79,7 @@
       <input type="text" size="20" maxlength="20" name="P1201901__b" value=""> 
   </td> 
  </tr--> 
- <tr class="isbn-souboru"> 
+ <tr class="isbn-souboru" > 
   <td class="td1" width="15%" nowrap> 
       ISBN souboru: &nbsp; 
   </td> 
@@ -246,6 +248,7 @@
  
 <br> 
 <div class="copyright"> &copy; 2014 Ex Libris, NK ČR</div> 
- 
+<script type="text/javascript" src="js/jquery.form.js"></script>
+<script type="text/javascript" src="js/inline_validation.js"></script>
 </body> 
 </html>

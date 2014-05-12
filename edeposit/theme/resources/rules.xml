@@ -16,7 +16,6 @@
       <drop theme="/html/head/title" />
       <drop theme="/html/head/base" />
       <drop theme="/html/head/style" />
-      <drop theme="/html/head/script" />
       <drop theme="/html/head/comment()" />
       
       <after content="/html/head/meta" theme-children="/html/head" />
@@ -46,7 +45,7 @@
                
       <!-- form / file / isbn -->
       <after css:content="#formfield-form-widgets-IOriginalFile-isbn div.fieldErrorBox"
-             css:theme-children=".original-file > td:nth-child(1)"/>
+             css:theme-children=".original-file > td:nth-child(2)"/>
       <copy css:content="#form-widgets-IOriginalFile-isbn"
             css:theme=".original-file > td:nth-child(2)"/>
       
