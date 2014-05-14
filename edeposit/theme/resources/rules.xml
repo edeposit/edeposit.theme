@@ -38,7 +38,7 @@
       <drop css:theme="td" attributes="width"/>
       <drop css:theme="input[type='hidden']"/>
       <drop css:theme="form" attributes="*"/>
-      <copy css:content="form" attributes="*" css:theme="form"/>
+      <copy css:content="#form" attributes="*" css:theme="form"/>
       <drop css:theme="td.submit-buttons a"/>
       <after css:content="input[name='form.buttons.save']" css:theme-children="td.submit-buttons"/>
       <after css:content="input[name='form.buttons.cancel']" css:theme-children="td.submit-buttons"/>
