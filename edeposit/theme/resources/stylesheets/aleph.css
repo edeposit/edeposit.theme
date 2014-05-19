@@ -27,6 +27,15 @@ input[type='submit'] {
     font-size:120%;
 }
 
+.option {
+    display:block;
+}
+
+#form-widgets-libraries_that_can_access-input-fields {
+    float: left;
+    margin: 1em;
+}
+
 .fieldErrorBox div.error {
     background-color: #FDC;
     border: 1px solid #F00;

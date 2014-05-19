@@ -75,6 +75,8 @@
             css:content="#form-widgets-IOriginalFile-format"
             />
 
+      <!-- (pouze pro vícesvazkové dokumenty)  -->
+
       <!-- nazev -->
       <after  css:theme-children=".nazev td:nth-child(1)"
               css:content="#formfield-form-widgets-IBasic-title  div.fieldErrorBox"
@@ -108,7 +110,7 @@
               css:content="#formfield-form-widgets-isbn_souboru_publikaci  div.fieldErrorBox"
             />
       
-      <copy css:theme=".isbn-souboru > td:nth-child(2)" 
+      <replace css:theme=".isbn-souboru > td:nth-child(2) > input" 
             css:content="#form-widgets-isbn_souboru_publikaci"
             />
       
@@ -181,21 +183,13 @@
              css:content="#form-widgets-nakladatel_vydavatel"
             />
       
-      <!-- datum vydani -->
-      <after  css:theme-children=".datum-vydani td:nth-child(1)"
+      <!-- rok vydani -->
+      <after  css:theme-children=".rok-vydani td:nth-child(1)"
               css:content="#formfield-form-widgets-datum_vydani  div.fieldErrorBox"
             />
 
       <copy  css:theme="#datum-vydani"
-             css:content="#form-widgets-datum_vydani-day"
-            />
-
-      <after  css:theme-children="#datum-vydani"
-              css:content="#form-widgets-datum_vydani-month"
-            />
-
-      <after  css:theme-children="#datum-vydani"
-              css:content="#form-widgets-datum_vydani-year"
+             css:content="#form-widgets-rok_vydani"
             />
 
       <!-- vydano v koedici s -->
@@ -228,12 +222,8 @@
             />
 
       <!-- RIV -->
-      <after  css:theme-children=".riv td:nth-child(1)"
-              css:content="#formfield-form-widgets-offer_to_riv  div.fieldErrorBox"
-            />
-
       <copy  css:theme=".riv td:nth-child(2)"
-             css:content="#form-widgets-offer_to_riv-0"
+             css:content="#formfield-form-widgets-offer_to_riv"
             />
 
       <after  css:theme-children=".riv td:nth-child(3)"
@@ -245,14 +235,14 @@
             />
       
       <!-- zpristupneni -->
-      <!-- <after  css:theme-children="form" -->
-      <!--         css:content="#form > input[hidden]" -->
-      <!--       /> -->
+      <copy  css:theme=".zpristupneni > td:nth-child(2)"
+             css:content="#formfield-form-widgets-is_public"
+            />
+      <copy css:content="#formfield-form-widgets-libraries_that_can_access"
+            css:theme=".zpristupneni > td:nth-child(4)"/>
 
-      <!-- <copy attributes="name value type id" -->
-      <!--        css:theme=".poradi-vydani td:nth-child(2) input" -->
-      <!--        css:content="#form-widgets-poradi_vydani" -->
-      <!--       /> -->
+      <copy css:content="#formfield-form-widgets-libraries_accessing"
+            css:theme=".zpristupneni > td:nth-child(3)"/>
 
       <!-- all hidden inputs from content -->
       <after css:theme-children="form"

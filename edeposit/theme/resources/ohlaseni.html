@@ -4,7 +4,15 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Ohlášovací lístek</title>
     <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.bgiframe.min.js"></script>
+    <script type="text/javascript" src="js/jquery.autocomplete.pack.js"></script>
+    <script type="text/javascript" src="js/contenttree.js"></script>
+    <script type="text/javascript" src="js/formwidget-autocomplete.js"></script>
+
     <link rel="stylesheet" href="stylesheets/aleph.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="stylesheets/contenttree.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="stylesheets/jquery.autocomplete.css" type="text/css" media="screen" />
+
     <!--[if IE]>
       <link rel="stylesheet" media="screen" type="text/css" href="stylesheets/iefixes.css" />
     <![endif]-->
@@ -201,10 +209,26 @@
   </td> 
  </tr> 
 
- <tr height="15"> <td></td> </tr> 
+ <tr height="15"> <td colspan="4"></td> </tr> 
+
+ <tr class="zpristupneni">
+  <td class="td1" nowrap>
+      Zpřístupnění
+  </td>
+  <td class="td1">
+      <input type="text" size="20" maxlength="50" name="P0901210__a" value="">
+  </td>
+  <td class="td1" colspan="1"  nowrap>
+  </td>
+  <td class="td1" colspan="3" nowrap>
+  </td>
+ </tr>
+
+ <tr height="15"> <td colspan="4"></td></tr> 
+
  <tr class="riv">
   <td class="td1" nowrap> 
-      Zpřístupnit pro RIV:
+      RIV
   </td> 
   <td class="td1">
       <input type="text" size="20" maxlength="50" name="P0901210__a" value=""> 
@@ -216,20 +240,8 @@
       <input type="text" size="45" maxlength="150" name="P0902210__c" value=""> 
   </td> 
  </tr> 
- <!-- <tr class="zpristupneni">  -->
- <!--  <td class="td1" nowrap>  -->
- <!--      Knihovny s terminal pristupem -->
- <!--  </td>  -->
- <!--  <td class="td1"> -->
- <!--      <input type="text" size="20" maxlength="50" name="P0901210__a" value="">  -->
- <!--  </td>  -->
- <!--  <td class="td1" nowrap>  -->
- <!--      Knihovny s public pristupem -->
- <!--  </td>  -->
- <!--  <td class=td1 colspan=3>  -->
- <!--      <input type="text" size="45" maxlength="150" name="P0902210__c" value="">  -->
- <!--  </td>  -->
- <!-- </tr>  -->
+
+
 
  <tr> 
   <td class="td1" colspan="5" align="right"> 
