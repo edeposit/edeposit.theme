@@ -5,7 +5,7 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     
     <!-- Rules applying to standard Plone pages -->
-    <rules if-path="++add++edeposit.content.epublication">
+    <rules if-path="add-at-once">
       <theme href="ohlaseni.html"/>
         
       <!-- Copy standard header tags, including base (very important for
