@@ -48,8 +48,18 @@
              css:theme-children=".original-file > td:nth-child(2)"/>
       <copy css:content="#form-widgets-IOriginalFile-isbn"
             css:theme=".original-file > td:nth-child(2)"/>
+
+      <!-- form / file / generated_isbn -->
+      <copy css:content="#formfield-form-widgets-IOriginalFile-generated_isbn" 
+            css:theme=".original-file-additional-fields > td:nth-child(1)"
+             />
+      
+      <after  css:theme-children=".original-file-additional-fields > td:nth-child(1)"
+              css:content="#formfield-form-widgets-IOriginalFile-generated_isbn  div.fieldErrorBox"
+              />
       
       <!-- form / file / url -->
+
       <copy css:content="#formfield-form-widgets-IOriginalFile-url > label:nth-child(1)"
             css:theme=".upload-label"/>
       <after css:content="#formfield-form-widgets-IOriginalFile-url div.fieldErrorBox"
@@ -58,15 +68,17 @@
             css:theme=".upload"/>
       
       <!-- form / file / upload -->
+
       <copy css:content="#formfield-form-widgets-IOriginalFile-file > label:nth-child(1)"
             css:theme="td.td1:nth-child(5)"></copy>
       <after css:theme-children="td.td1:nth-child(5)">*</after>
       <after css:content="#formfield-form-widgets-IOriginalFile-file div.fieldErrorBox"
              css:theme-children="td.td1:nth-child(5)"/>
-      <copy css:content="#form-widgets-IOriginalFile-file-input" 
+      <copy css:content="#form-widgets-IOriginalFile-file-input"
             css:theme="td.td1:nth-child(6)"/>
       
       <!-- format -->
+
       <after  css:theme-children=".isbn-souboru td:nth-child(3)"
               css:content="#formfield-form-widgets-IOriginalFile-format  div.fieldErrorBox"
             />
