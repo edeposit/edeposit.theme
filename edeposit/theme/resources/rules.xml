@@ -30,6 +30,10 @@
            for per-section styling -->
       <copy attributes="class id dir" content="/html/body" theme="/html/body" />
       
+      <!-- link for original file contributing -->
+      <replace css:theme="#originalfile-contributing">
+        <a href="../originalfile-contributing/contribute">odevzdat dokument</a>
+      </replace>
       <!-- Logo (link target) -->
       <copy attributes="href title" css:content="#portal-logo" css:theme="#portal-logo" />
       <copy attributes="src width height" css:theme="#portal-logo img" css:content="#portal-logo img"/>
