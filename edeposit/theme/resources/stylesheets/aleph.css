@@ -64,6 +64,21 @@ dl.portalMessage dt, div > .admonition-title {
     line-height: 1.25em;
 }
 
+dl.portalMessage, div.attention, div.caution, div.danger, div.error, div.hint, div.important, div.note, div.tip, div.warning {
+    margin: 1em 0px;
+    font-size: 80%;
+    border: 1px solid #996;
+    background-color: #FFFFE3;
+    clear: both;
+}
+
+div.field.error {
+    background-color: #FDC;
+    border: 1px solid #F00;
+    padding: 0.5em;
+    margin: 1em 0px;
+}
+
 img
 {
   border-color:#212063;

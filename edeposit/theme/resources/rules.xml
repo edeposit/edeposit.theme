@@ -75,7 +75,7 @@
 
       <copy css:content="#formfield-form-widgets-IOriginalFile-file > label:nth-child(1)"
             css:theme="td.td1:nth-child(5)"></copy>
-      <after css:theme-children="td.td1:nth-child(5)">*</after>
+      <!-- <after css:theme-children="td.td1:nth-child(5)">*</after> -->
       <after css:content="#formfield-form-widgets-IOriginalFile-file div.fieldErrorBox"
              css:theme-children="td.td1:nth-child(5)"/>
       <copy css:content="#form-widgets-IOriginalFile-file-input"
@@ -295,8 +295,8 @@
       <before css:content="#edit-bar" css:theme="#document-content" />
       
       <!-- Status messages not inside #content -->
-      <drop css:content="#content .portalMessage"/>
-      <before css:content=".portalMessage" method="raw" css:theme="#document-content" />
+      <!-- <drop css:content="#content .portalMessage"/> -->
+      <!-- <before css:content=".portalMessage" method="raw" css:theme="#document-content" /> -->
       
       <!-- Drop navtree images -->
       <drop css:content="dl#portletNavigationTree img" />
@@ -308,8 +308,8 @@
       <!-- Footer -->
       <after css:content="#kss-spinner" theme-children="/html/body" />
 
-      <after css:theme="p.info"
-              css:content="dl.portalMessage"/>
+      <after css:theme="dl.portalMessage" css:content="dl.portalMessage"/>
+      <after css:theme="dl.portalMessage" css:content="#content-core > div.field.error"/>
 
       <!-- <after css:content="#portal-column-content" -->
       <!--        css:theme-children="body"/> -->

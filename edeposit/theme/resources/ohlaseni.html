@@ -9,7 +9,7 @@
     <script type="text/javascript" src="js/contenttree.js"></script>
     <script type="text/javascript" src="js/formwidget-autocomplete.js"></script>
 
-    <link rel="stylesheet" href="stylesheets/aleph.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="stylesheets/aleph.css"  type="text/css" media="screen" />
     <link rel="stylesheet" href="stylesheets/contenttree.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="stylesheets/jquery.autocomplete.css" type="text/css" media="screen" />
 
@@ -44,6 +44,8 @@
 </p>
 <p class="text1 info">Údaje označené <b>*</b> jsou <b>povinné</b>.</p> 
  
+<dl class="portalMessage"></dl>
+
 <form method="post"
       name="f" action="http://aleph.nkp.cz/aleph-cgi/isxn" 
       onsubmit="return submit_conf();"> 
@@ -84,7 +86,7 @@
  </tr> 
  <tr class="original-file-additional-fields" > 
   <td class="td1" colspan="4" nowrap>Generate ISBN?:</td> 
-  <td class="td1" nowrap>Formát<b>*</b>&nbsp;</td>
+  <td class="td1" >Formát</td>
   <td class="td1" id="format-souboru">
     <input type="text" size="10" maxlength="25" name="P0503010__x" value="">
     </td>
