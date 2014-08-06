@@ -201,10 +201,10 @@
       
       <!-- rok vydani -->
       <after  css:theme-children=".rok-vydani td:nth-child(1)"
-              css:content="#formfield-form-widgets-datum_vydani  div.fieldErrorBox"
+              css:content="#formfield-form-widgets-rok_vydani  div.fieldErrorBox"
             />
 
-      <copy  css:theme="#datum-vydani"
+      <copy  css:theme="#rok-vydani-input"
              css:content="#form-widgets-rok_vydani"
             />
 
