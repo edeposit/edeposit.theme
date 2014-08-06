@@ -103,11 +103,11 @@
             />
       
       <!-- cena -->
-      <after  css:theme-children=".nazev td:nth-child(3)"
+      <after  css:theme-children="#cena-label"
               css:content="#formfield-form-widgets-cena  div.fieldErrorBox"
             />
 
-      <copy css:theme=".nazev > td:nth-child(4)" 
+      <copy css:theme="#cena-input" 
             css:content="#form-widgets-cena"
             />
       
