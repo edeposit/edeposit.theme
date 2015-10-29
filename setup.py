@@ -26,6 +26,7 @@ setup(name='edeposit.theme',
       install_requires=[
           'setuptools',
           'plone.app.theming',
+          'collective.z3cform.datagridfield',
           # -*- Extra requirements: -*-
       ],
       extras_require = {

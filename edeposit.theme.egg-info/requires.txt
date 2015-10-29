@@ -1,5 +1,6 @@
 setuptools
 plone.app.theming
+collective.z3cform.datagridfield
 
 [test]
 plone.app.testing
